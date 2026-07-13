@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Progress Demo</title>
+    <style>
+      :root {
+        --bg: #0a0a0a;
+        --text-muted: #8b8b8b;
+        --accent: #ff9500;
+        --circle-size: 32px;
+        --gap: 4px;
+        --ring-0-delay: 0s;
+        --ring-1-delay: 0.15s;
+        --ring-2-delay: 0.3s;
+        --fill-duration: 0.72s;
+        --glow: 0 0 14px rgba(255, 255, 255, 0.34);
+        --ease-elastic: cubic-bezier(0.22, 1.35, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--bg);
+        color: #fff;
+        font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .progress-demo {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 28px 30px;
+        border-radius: 18px;
+        background:
+          radial-gradient(circle at 28% 50%, rgba(255, 255, 255, 0.06), transparent 28%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+          0 18px 40px rgba(0, 0, 0, 0.28);
+      }
+
+      .honeycomb-shell {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 188px;
+        height: 188px;
+      }
+
+      .honeycomb-shell::before,
+      .honeycomb-shell::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        inset: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .honeycomb-shell::after {
+        inset: 0;
+        border-color: rgba(255, 255, 255, 0.04);
+      }
+
+      .honeycomb {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+      }
+
+      .honeycomb__row {
+        display: flex;
+        justify-content: center;
+        gap: var(--gap);
+      }
+
+      .dot {
+        width: var(--circle-size);
+        height: var(--circle-size);
+        border-radius: 50%;
+        border: 2px solid #555;
+        background: transparent;
+        transform: scale(1);
+      }
+
+      .progress-demo.is-animating .dot {
+        animation: fillPulse var(--fill-duration) var(--ease-elastic) forwards;
+        animation-delay: var(--delay);
+      }
+
+      .ring-0 {
+        --delay: var(--ring-0-delay);
+      }
+
+      .ring-1 {
+        --delay: var(--ring-1-delay);
+      }
+
+      .ring-2 {
+        --delay: var(--ring-2-delay);
+      }
+
+      .progress-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-width: 138px;
+      }
+
+      .progress-copy__label {
+        font-size: 28px;
+        line-height: 1.1;
+        color: var(--text-muted);
+        letter-spacing: 0.04em;
+      }
+
+      .progress-copy__value {
+        font-size: 64px;
+        line-height: 0.95;
+        font-weight: 800;
+        color: var(--accent);
+        font-family: "Bahnschrift", "Segoe UI", sans-serif;
+      }
+
+      .progress-demo__replay {
+        margin-top: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.78);
+        padding: 10px 16px;
+        border-radius: 999px;
+        letter-spacing: 0.14em;
+        cursor: pointer;
+      }
+
+      @keyframes fillPulse {
+        0% {
+          background: transparent;
+          box-shadow: none;
+          transform: scale(0);
+          border-color: #555;
+        }
+
+        72% {
+          background: #fff;
+          box-shadow: var(--glow);
+          transform: scale(1.1);
+          border-color: #fff;
+        }
+
+        100% {
+          background: #fff;
+          box-shadow: var(--glow);
+          transform: scale(1);
+          border-color: #fff;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .progress-demo {
+          gap: 18px;
+          padding: 20px;
+          transform: scale(0.86);
+          transform-origin: center center;
+        }
+
+        .progress-copy__label {
+          font-size: 22px;
+        }
+
+        .progress-copy__value {
+          font-size: 52px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <section class="progress-demo is-animating" id="progress-demo" aria-label="Research progress demo">
+        <div class="honeycomb-shell" aria-hidden="true">
+          <div class="honeycomb">
+            <div class="honeycomb__row">
+              <span class="dot ring-2"></span>
+              <span class="dot ring-2"></span>
+              <span class="dot ring-2"></span>
+            </div>
+            <div class="honeycomb__row">
+              <span class="dot ring-2"></span>
+              <span class="dot ring-1"></span>
+              <span class="dot ring-1"></span>
+              <span class="dot ring-2"></span>
+            </div>
+            <div class="honeycomb__row">
+              <span class="dot ring-2"></span>
+              <span class="dot ring-1"></span>
+              <span class="dot ring-0"></span>
+              <span class="dot ring-1"></span>
+              <span class="dot ring-2"></span>
+            </div>
+            <div class="honeycomb__row">
+              <span class="dot ring-2"></span>
+              <span class="dot ring-1"></span>
+              <span class="dot ring-1"></span>
+              <span class="dot ring-2"></span>
+            </div>
+            <div class="honeycomb__row">
+              <span class="dot ring-2"></span>
+              <span class="dot ring-2"></span>
+              <span class="dot ring-2"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="progress-copy">
+          <span class="progress-copy__label">计划进度</span>
+          <strong class="progress-copy__value" id="progress-value">0%</strong>
+        </div>
+      </section>
+
+      <button class="progress-demo__replay" id="replay" type="button">REPLAY</button>
+    </div>
+
+    <script>
+      const demo = document.getElementById("progress-demo");
+      const value = document.getElementById("progress-value");
+      const replay = document.getElementById("replay");
+
+      const totalDuration = 1020;
+
+      function animateValue() {
+        const start = performance.now();
+
+        function tick(now) {
+          const elapsed = Math.min(now - start, totalDuration);
+          const progress = elapsed / totalDuration;
+          value.textContent = `${Math.round(progress * 100)}%`;
+
+          if (elapsed < totalDuration) {
+            requestAnimationFrame(tick);
+          }
+        }
+
+        requestAnimationFrame(tick);
+      }
+
+      function restart() {
+        demo.classList.remove("is-animating");
+        value.textContent = "0%";
+        void demo.offsetWidth;
+        demo.classList.add("is-animating");
+        animateValue();
+      }
+
+      replay.addEventListener("click", restart);
+      animateValue();
+    </script>
+  </body>
+</html>

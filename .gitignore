@@ -1,0 +1,25 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Claude / local tooling
+.claude/
+.codex/
+
+# Documentation
+*.md
+
+# Build output and temp files
+dist/
+页面样式图片概览/
+*.log
+*.tmp
+*.temp
+
+# Design / source project files that should not be published
+assets/images/ui/logo/rhinelablogo/
+
+# Optional dependency folders
+node_modules/

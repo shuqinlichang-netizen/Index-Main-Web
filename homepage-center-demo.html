@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage Center Demo</title>
+    <style>
+      :root {
+        --bg: #e8e6e1;
+        --orange: #f5a623;
+        --white-line: #f0f0f0;
+        --diamond: rgba(136, 136, 136, 0.4);
+        --dot: #111111;
+        --stroke: 20px;
+        --ease-tech: cubic-bezier(0.4, 0, 0.2, 1);
+        --ease-elastic: cubic-bezier(0.22, 1.35, 0.36, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background: var(--bg);
+        font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      .center-demo {
+        position: relative;
+        width: min(82vw, 760px);
+        aspect-ratio: 1 / 1;
+      }
+
+      .center-demo__portal {
+        position: absolute;
+        inset: 14%;
+        border-radius: 50%;
+        background: radial-gradient(circle, #000 34%, rgba(0, 0, 0, 0.88) 56%, rgba(0, 0, 0, 0) 84%);
+        filter: blur(18px);
+        z-index: 1;
+      }
+
+      .diamond-grid {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .diamond-grid__inner {
+        --cell: 68px;
+        --gap: 5px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: calc(var(--cell) * 5 + var(--gap) * 4);
+        height: calc(var(--cell) * 4 + var(--gap) * 3);
+        transform: translate(-49%, -50%) rotate(45deg);
+        transform-origin: center;
+      }
+
+      .diamond {
+        position: absolute;
+        width: var(--cell);
+        height: var(--cell);
+        background: linear-gradient(135deg, rgba(246, 246, 236, 0.76), rgba(96, 98, 90, 0.32));
+        opacity: 0;
+        filter: contrast(0.95);
+      }
+
+      .is-animating .diamond {
+        animation: diamondReveal 0.72s var(--ease-tech) forwards;
+      }
+
+      .diamond--r0-c0 { left: calc((var(--cell) + var(--gap)) * 0); top: calc((var(--cell) + var(--gap)) * 0); animation-delay: 3.04s; }
+      .diamond--r0-c2 { left: calc((var(--cell) + var(--gap)) * 2); top: calc((var(--cell) + var(--gap)) * 0); animation-delay: 2.84s; }
+      .diamond--r0-c4 { left: calc((var(--cell) + var(--gap)) * 4); top: calc((var(--cell) + var(--gap)) * 0); animation-delay: 3.08s; }
+
+      .diamond--r1-c1 { left: calc((var(--cell) + var(--gap)) * 1); top: calc((var(--cell) + var(--gap)) * 1); animation-delay: 2.68s; }
+      .diamond--r1-c2 { left: calc((var(--cell) + var(--gap)) * 2); top: calc((var(--cell) + var(--gap)) * 1); animation-delay: 2.52s; }
+      .diamond--r1-c3 { left: calc((var(--cell) + var(--gap)) * 3); top: calc((var(--cell) + var(--gap)) * 1); animation-delay: 2.7s; }
+      .diamond--r1-c4 { left: calc((var(--cell) + var(--gap)) * 4); top: calc((var(--cell) + var(--gap)) * 1); animation-delay: 2.92s; }
+
+      .diamond--r2-c0 { left: calc((var(--cell) + var(--gap)) * 0); top: calc((var(--cell) + var(--gap)) * 2); animation-delay: 2.88s; }
+      .diamond--r2-c1 { left: calc((var(--cell) + var(--gap)) * 1); top: calc((var(--cell) + var(--gap)) * 2); animation-delay: 2.66s; }
+      .diamond--r2-c2 { left: calc((var(--cell) + var(--gap)) * 2); top: calc((var(--cell) + var(--gap)) * 2); animation-delay: 2.54s; }
+
+      .diamond--r3-c0 { left: calc((var(--cell) + var(--gap)) * 0); top: calc((var(--cell) + var(--gap)) * 3); animation-delay: 3.02s; }
+      .diamond--r3-c3 { left: calc((var(--cell) + var(--gap)) * 3); top: calc((var(--cell) + var(--gap)) * 3); animation-delay: 2.9s; }
+
+      .circuit-svg {
+        position: absolute;
+        inset: 0;
+        overflow: visible;
+        z-index: 3;
+      }
+
+      .orange-path {
+        fill: none;
+        stroke: var(--orange);
+        stroke-width: var(--stroke);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 2800;
+        stroke-dashoffset: 2800;
+      }
+
+      .is-animating .orange-path {
+        animation: drawPath 1.2s var(--ease-tech) forwards;
+      }
+
+      .junction-ring {
+        fill: #0a0a0a;
+        stroke: var(--orange);
+        stroke-width: 6px;
+        transform-origin: 380px 396px;
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      .is-animating .junction-ring {
+        animation: ringPulse 0.48s 0.1s var(--ease-elastic) forwards;
+      }
+
+      .white-line {
+        fill: none;
+        stroke: var(--white-line);
+        stroke-width: 10px;
+        stroke-linecap: round;
+        opacity: 0;
+        stroke-dasharray: 1600;
+        stroke-dashoffset: 1600;
+      }
+
+      .is-animating .white-line {
+        animation: revealLine 0.9s var(--ease-tech) forwards;
+      }
+
+      .white-line--a { animation-delay: 1.08s; }
+      .white-line--b { animation-delay: 1.16s; }
+      .white-line--c { animation-delay: 1.24s; }
+      .white-line--d { animation-delay: 1.32s; }
+
+      .data-dot {
+        fill: var(--dot);
+        opacity: 0;
+        transform-origin: center;
+        transform: scale(0);
+      }
+
+      .is-animating .data-dot {
+        animation: dotPop 0.32s var(--ease-elastic) forwards;
+      }
+
+      .data-dot--1 { animation-delay: 1.38s; }
+      .data-dot--2 { animation-delay: 1.46s; }
+      .data-dot--3 { animation-delay: 1.54s; }
+      .data-dot--4 { animation-delay: 1.62s; }
+      .data-dot--5 { animation-delay: 1.7s; }
+      .data-dot--6 { animation-delay: 1.78s; }
+      .data-dot--7 { animation-delay: 1.86s; }
+      .data-dot--8 { animation-delay: 1.94s; }
+      .data-dot--9 { animation-delay: 2.02s; }
+      .data-dot--10 { animation-delay: 2.1s; }
+      .data-dot--11 { animation-delay: 2.18s; }
+
+      .demo-controls {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+      }
+
+      .demo-controls__button {
+        border: 1px solid rgba(17, 17, 17, 0.14);
+        background: rgba(255, 255, 255, 0.46);
+        color: #111;
+        padding: 10px 16px;
+        border-radius: 999px;
+        letter-spacing: 0.14em;
+        cursor: pointer;
+      }
+
+      @keyframes drawPath {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes revealLine {
+        from {
+          opacity: 0;
+          stroke-dashoffset: 1600;
+        }
+
+        to {
+          opacity: 1;
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes dotPop {
+        0% {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        72% {
+          opacity: 1;
+          transform: scale(1.15);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes ringPulse {
+        0% {
+          transform: scale(1);
+        }
+
+        62% {
+          transform: scale(1.16);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes diamondReveal {
+        0% {
+          opacity: 0;
+          transform: translateY(16px) scale(0.92);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (max-width: 760px) {
+        .center-demo {
+          width: min(92vw, 560px);
+        }
+
+        .diamond-grid__inner {
+          transform: translate(-49%, -50%) rotate(45deg) scale(0.76);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="center-demo is-animating" id="center-demo" aria-label="Homepage center animation demo">
+      <div class="center-demo__portal"></div>
+
+      <div class="diamond-grid" aria-hidden="true">
+        <div class="diamond-grid__inner">
+          <span class="diamond diamond--r0-c0"></span>
+          <span class="diamond diamond--r0-c2"></span>
+          <span class="diamond diamond--r0-c4"></span>
+          <span class="diamond diamond--r1-c1"></span>
+          <span class="diamond diamond--r1-c2"></span>
+          <span class="diamond diamond--r1-c3"></span>
+          <span class="diamond diamond--r1-c4"></span>
+          <span class="diamond diamond--r2-c0"></span>
+          <span class="diamond diamond--r2-c1"></span>
+          <span class="diamond diamond--r2-c2"></span>
+          <span class="diamond diamond--r3-c0"></span>
+          <span class="diamond diamond--r3-c3"></span>
+        </div>
+      </div>
+
+      <svg class="circuit-svg" viewBox="0 0 760 760" role="presentation">
+        <path
+          class="orange-path"
+          d="M380 396 L380 -260
+             M380 396 C380 360 350 330 320 300 L-130 -72
+             M380 396 C380 360 406 326 442 292 C500 236 556 136 618 -260
+             M380 396 L380 1180
+             M380 612 C380 660 384 840 426 1180"
+        />
+
+        <line class="white-line white-line--a" x1="350" y1="-260" x2="350" y2="1180"></line>
+        <line class="white-line white-line--b" x1="364" y1="-260" x2="364" y2="1180"></line>
+        <line class="white-line white-line--c" x1="378" y1="-260" x2="378" y2="1180"></line>
+        <line class="white-line white-line--d" x1="586" y1="-260" x2="586" y2="1180"></line>
+
+        <circle class="data-dot data-dot--1" cx="350" cy="238" r="4"></circle>
+        <circle class="data-dot data-dot--2" cx="364" cy="238" r="4"></circle>
+        <circle class="data-dot data-dot--3" cx="378" cy="238" r="4"></circle>
+
+        <circle class="data-dot data-dot--4" cx="350" cy="396" r="4"></circle>
+        <circle class="data-dot data-dot--5" cx="364" cy="396" r="4"></circle>
+        <circle class="data-dot data-dot--6" cx="378" cy="396" r="4"></circle>
+
+        <circle class="data-dot data-dot--7" cx="350" cy="650" r="4"></circle>
+        <circle class="data-dot data-dot--8" cx="364" cy="650" r="4"></circle>
+        <circle class="data-dot data-dot--9" cx="378" cy="650" r="4"></circle>
+
+        <circle class="data-dot data-dot--10" cx="586" cy="236" r="4"></circle>
+        <circle class="data-dot data-dot--11" cx="586" cy="488" r="4"></circle>
+
+        <circle class="junction-ring" cx="380" cy="396" r="15"></circle>
+      </svg>
+    </section>
+
+    <div class="demo-controls">
+      <button class="demo-controls__button" id="replay" type="button">REPLAY</button>
+    </div>
+
+    <script>
+      const demo = document.getElementById("center-demo");
+      const replay = document.getElementById("replay");
+
+      replay.addEventListener("click", () => {
+        demo.classList.remove("is-animating");
+        void demo.offsetWidth;
+        demo.classList.add("is-animating");
+      });
+    </script>
+  </body>
+</html>

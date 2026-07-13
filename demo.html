@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rhine Lab Department Layout Demo</title>
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/department-layout-demo.css" />
+  </head>
+  <body>
+    <main class="department-demo">
+      <header class="brand-mark brand-mark--dark">
+        <p class="brand-mark__title">RHINE LAB</p>
+        <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
+        <p class="brand-mark__meta">ANALYSIS OS</p>
+      </header>
+
+      <section class="department-demo__stage" aria-label="Department layout demo">
+        <div class="department-demo__cluster department-demo__cluster--left">
+          <button class="demo-card demo-card--outer demo-card--outer-top">
+            <span class="demo-card__code demo-card__code--split">CMPT<br />CTRL</span>
+            <span class="demo-card__desc">COMPONENT CONTROL SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--inner demo-card--inner-top">
+            <span class="demo-card__code">ORG</span>
+            <span class="demo-card__desc">ORIGINIUM ART SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--outer-middle">
+            <span class="demo-card__code">NRG</span>
+            <span class="demo-card__desc">ENERGY SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--inner demo-card--inner-bottom">
+            <span class="demo-card__code">SCIEN</span>
+            <span class="demo-card__desc">SCIENTIFIC INVESTIGATION SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--outer demo-card--outer-bottom">
+            <span class="demo-card__code">STRU</span>
+            <span class="demo-card__desc">STRUCTURAL SECTION</span>
+          </button>
+        </div>
+
+        <div class="demo-panel">
+          <div class="demo-panel__frame">
+            <span class="demo-panel__corner demo-panel__corner--tl"></span>
+            <span class="demo-panel__corner demo-panel__corner--tr"></span>
+            <span class="demo-panel__corner demo-panel__corner--bl"></span>
+            <span class="demo-panel__corner demo-panel__corner--br"></span>
+          </div>
+          <div class="demo-panel__content">
+            <p class="demo-panel__eyebrow">LAYOUT DEMO</p>
+            <h1 class="demo-panel__title">INNER 2 / OUTER 3</h1>
+            <p class="demo-panel__copy">
+              这个 demo 只验证按钮位置关系。内列两个按钮更小，外列三个按钮更大，外中按钮的上下边正好落在内列两个按钮的中心水平线上。
+            </p>
+          </div>
+        </div>
+
+        <div class="department-demo__cluster department-demo__cluster--right">
+          <button class="demo-card demo-card--outer demo-card--outer-top">
+            <span class="demo-card__code">DEF</span>
+            <span class="demo-card__desc">DEFENSE SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--inner demo-card--inner-top">
+            <span class="demo-card__code">ECO</span>
+            <span class="demo-card__desc">ECOLOGICAL SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--outer-middle">
+            <span class="demo-card__code">BSN</span>
+            <span class="demo-card__desc">BUSINESS SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--inner demo-card--inner-bottom">
+            <span class="demo-card__code">ENG</span>
+            <span class="demo-card__desc">ENGINEERING SECTION</span>
+          </button>
+
+          <button class="demo-card demo-card--outer demo-card--outer-bottom">
+            <span class="demo-card__code">HRI</span>
+            <span class="demo-card__desc">HUMAN RESOURCES INVESTIGATION SECTION</span>
+          </button>
+        </div>
+
+        <aside class="demo-nav-placeholder" aria-label="Navigation placeholder">
+          <span class="demo-nav-placeholder__item">HOMEPAGE</span>
+          <span class="demo-nav-placeholder__item">HEADQUARTERS</span>
+          <span class="demo-nav-placeholder__item">MEMBER</span>
+          <span class="demo-nav-placeholder__item demo-nav-placeholder__item--active">DEPARTMENT</span>
+          <span class="demo-nav-placeholder__item">RESEARCH</span>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
