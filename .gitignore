@@ -17,6 +17,8 @@ dist/
 *.log
 *.tmp
 *.temp
+*.mp4
+
 
 # Design / source project files that should not be published
 assets/images/ui/logo/rhinelablogo/
