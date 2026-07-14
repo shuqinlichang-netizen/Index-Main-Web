@@ -10,6 +10,7 @@ Thumbs.db
 
 # Documentation
 *.md
+!README.md
 
 # Build output and temp files
 dist/
