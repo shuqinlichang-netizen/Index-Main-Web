@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zorro OPC</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.4/lottie.min.js"></script>
+    <title>Miru Resume OS</title>
+    <script src="./assets/vendor/lottie.min.js"></script>
     <script src="./src/scripts/rhine-logo-animation-data.js"></script>
+    <link rel="icon" type="image/png" href="./assets/images/ui/avatar/miru-logo.png?v=2" />
     <link rel="stylesheet" href="./src/styles/base.css" />
     <link rel="stylesheet" href="./src/styles/enter.css" />
     <link rel="stylesheet" href="./src/styles/auth.css" />
@@ -15,36 +16,71 @@
     <link rel="stylesheet" href="./src/styles/department.css" />
     <link rel="stylesheet" href="./src/styles/research.css" />
     <link rel="stylesheet" href="./src/styles/modal.css" />
+    <link rel="stylesheet" href="./src/styles/rhine-theme.css" />
   </head>
   <body>
     <main class="app-shell">
-      <section class="enter-screen" id="enter-screen" aria-label="Rhine Lab Enter">
-        <header class="brand-mark">
-          <p class="brand-mark__title">ZORRO</p>
-          <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
-          <p class="brand-mark__meta">ANALYSIS OS</p>
+      <section class="enter-screen" id="enter-screen" aria-label="Miru Resume Enter">
+        <div class="screen-watermark" aria-hidden="true"></div>
+        <header class="entry-nav">
+          <div class="brand-mark">
+            <p class="brand-mark__title">MIRU</p>
+            <p class="brand-mark__meta">CREATIVE EDITING</p>
+            <p class="brand-mark__meta">QUALITY ASSURANCE</p>
+          </div>
+          <nav class="entry-nav__links" aria-label="Entry navigation">
+            <a href="#entry-panel">STORY</a>
+            <a href="#entry-panel">EXPERTISE</a>
+            <a href="#entry-heading">STUDIOS</a>
+            <a href="#entry-footer">FEEDBACK</a>
+          </nav>
+          <button class="entry-menu-toggle" id="entry-menu-toggle" type="button" aria-expanded="false" aria-controls="entry-menu" aria-label="Open entry navigation">
+            <span></span><span></span><span></span>
+          </button>
         </header>
+
+        <div class="entry-menu" id="entry-menu" aria-hidden="true">
+          <div class="entry-menu__top">
+            <span class="entry-menu__label">MIRU / NAVIGATION</span>
+            <button class="entry-menu__close" id="entry-menu-close" type="button" aria-label="Close entry navigation">×</button>
+          </div>
+          <nav class="entry-menu__links" aria-label="Mobile entry navigation">
+            <a href="#entry-panel">STORY <span>01</span></a>
+            <a href="#entry-panel">EXPERTISE <span>02</span></a>
+            <a href="#entry-heading">STUDIOS <span>03</span></a>
+            <a href="#entry-footer">FEEDBACK <span>04</span></a>
+          </nav>
+          <button class="entry-menu__cta" type="button" data-entry-cta>OPEN RESUME <span>↗</span></button>
+        </div>
 
         <div class="enter-screen__content">
           <div class="logo-stage">
             <div class="logo-stage__glow" aria-hidden="true"></div>
             <div class="logo-stage__lottie" id="logo-lottie" aria-hidden="true"></div>
-            <img
-              class="logo-stage__image"
-              id="logo-fallback"
-              src="./assets/images/ui/logo/rhinelablogo/骨架.png"
-              alt="Rhine Lab logo"
-            />
+            <div class="logo-stage__art">
+              <img
+                class="logo-stage__image"
+                id="logo-fallback"
+                src="./assets/images/ui/avatar/miru-logo.png?v=2"
+                alt="Miru logo"
+              />
+              <img
+                class="logo-stage__image logo-stage__image--white"
+                src="./assets/images/ui/avatar/miru-logo.png?v=2"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
           </div>
 
-          <div class="enter-panel">
+          <div class="enter-panel" id="entry-panel">
             <p class="enter-panel__eyebrow">WELCOME</p>
-            <h1 class="enter-panel__title">ENTER ZORRO LAB</h1>
+            <h1 class="enter-panel__title">ENTER RESUME OS</h1>
             <p class="enter-panel__copy">
-              接入你的个人实验室主控界面，浏览 Blog、项目归档与技术记录。
+              接入 Miru 的个人简历主控界面，浏览能力、经历与项目记录。
             </p>
 
-            <button class="enter-button" id="enter-button" type="button" aria-label="Enter Rhine Lab">
+            <button class="enter-button" id="enter-button" type="button" aria-label="Enter Miru Resume">
               <span class="enter-button__core" aria-hidden="true">
                 <img class="enter-button__icon" src="./assets/images/ui/icon/圆形上箭头.svg" alt="" />
               </span>
@@ -55,11 +91,22 @@
           </div>
         </div>
 
+        <div class="entry-bottom" id="entry-footer">
+          <div class="entry-bottom__top">
+            <p class="entry-tagline">SHAPING<br />SYSTEMS INTO<br />CLEAR SIGNALS</p>
+            <button class="entry-secondary-cta" type="button" data-entry-cta>OPEN RESUME <span>↗</span></button>
+          </div>
+          <div class="entry-bottom__main">
+            <p class="entry-description">A PERSONAL RESUME OS BUILT AROUND<br />CAPABILITY, CONTEXT AND CRAFT.</p>
+            <h2 class="entry-heading" id="entry-heading"><span>MAKE</span><span>WORK</span><span>VISIBLE</span></h2>
+          </div>
+        </div>
+
         <footer class="screen-footer">
           <div class="screen-footer__compliance">
             <span class="screen-footer__report">
-              侵权/违规内容举报：18290982860
-              <a class="screen-footer__report-link" href="mailto:zjg654123@126.com">zjg654123@126.com</a>
+              CONTACT CHANNEL · DETAILS AVAILABLE ON REQUEST
+              <a class="screen-footer__report-link" href="mailto:your.email@example.com">your.email@example.com</a>
             </span>
             <span class="screen-footer__records">
               <a
@@ -68,7 +115,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新ICP备2026005055号-1
+                RESUME / 2026
               </a>
               <a
                 class="screen-footer__record"
@@ -76,18 +123,19 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新公网安备65402302000118号
+                OPEN TO SELECTED PROJECTS
               </a>
             </span>
           </div>
           <div class="screen-footer__brand">
-            <span>POWERED BY RHINE LAB</span>
+            <span>POWERED BY ZUODEV RESUME OS</span>
             <span class="screen-footer__bar" aria-hidden="true"></span>
           </div>
         </footer>
       </section>
 
       <section class="auth-screen" id="auth-screen" aria-label="Permission authorized" aria-hidden="true">
+        <div class="screen-watermark" aria-hidden="true"></div>
         <div class="auth-screen__inner">
           <p class="auth-screen__status">AUTH SEQUENCE</p>
           <div class="orbit-system" aria-hidden="true">
@@ -101,39 +149,40 @@
 
           <div class="auth-screen__copy">
             <p class="auth-screen__headline" id="auth-type-line">PERMISSION AUTHORIZED</p>
-            <p class="auth-screen__subcopy">Primary node check complete. Rhine Lab access channel is now ready.</p>
+            <p class="auth-screen__subcopy">Profile check complete. Miru's resume access channel is now ready.</p>
           </div>
 
           <button class="auth-screen__replay" id="replay-intro" type="button">REPLAY INTRO</button>
         </div>
       </section>
 
-      <section class="homepage-screen" id="homepage-screen" aria-label="Rhine Lab Homepage" aria-hidden="true">
+      <section class="homepage-screen" id="homepage-screen" aria-label="Miru Resume Homepage" aria-hidden="true">
+        <div class="screen-watermark" aria-hidden="true"></div>
         <header class="brand-mark brand-mark--dark">
-          <p class="brand-mark__title">ZORRO</p>
-          <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
-          <p class="brand-mark__meta">ANALYSIS OS</p>
+          <p class="brand-mark__title">ZUODEV</p>
+          <p class="brand-mark__meta">SYNTHESIZE EXPERIENCE</p>
+          <p class="brand-mark__meta">RESUME OS</p>
         </header>
 
         <div class="homepage-screen__content">
           <div class="homepage-copy">
-            <p class="homepage-copy__eyebrow">HOMEPAGE</p>
+            <p class="homepage-copy__eyebrow">PROFILE / 01</p>
             <button class="homepage-copy__replay" id="homepage-replay" type="button">REPLAY INTRO</button>
-            <div class="homepage-copy__welcome" aria-label="WELCOME TO">
-              <span>W</span>
+            <div class="homepage-copy__welcome" aria-label="WELCOME TO RESUME OS">
+              <span>R</span>
               <span>E</span>
-              <span>L</span>
-              <span>C</span>
-              <span>O</span>
+              <span>S</span>
+              <span>U</span>
               <span>M</span>
               <span>E</span>
-              <span>T</span>
               <span>O</span>
+              <span>S</span>
+              <span></span>
             </div>
-            <h2 class="homepage-copy__title">ZORRO<span class="homepage-copy__accent">.OPC.</span></h2>
+            <h2 class="homepage-copy__title">ZUODEV<span class="homepage-copy__accent">.CV.</span></h2>
             <div class="homepage-copy__summary">
-              <p class="homepage-copy__line">我是 Zorro，一名专注于人工智能与软件工程交叉应用的大四学生。</p>
-              <p class="homepage-copy__line">聚焦后端开发与智能系统落地，擅长使用 Spring Boot 与 Java 构建稳定、可扩展的服务端。</p>
+              <p class="homepage-copy__line">我是 ZuoDev，一名专注于人工智能与软件工程交叉应用的开发者。</p>
+              <p class="homepage-copy__line">聚焦后端开发与智能系统落地，擅长使用 Java 与 Spring Boot 构建稳定、可扩展的服务端。</p>
               <p class="homepage-copy__line">持续探索 LLM 应用、Agent 与 RAG，把目标拆成可运行的系统，把思路沉淀成长期可复用的成果。</p>
               <p class="homepage-copy__line">欢迎各位朋友联系交流，一起面向目标持续进化。</p>
             </div>
@@ -141,7 +190,7 @@
             <div class="quick-links" aria-label="Quick links">
               <button class="quick-links__item" data-quick-link="blog" type="button">
                 <img src="./assets/images/ui/icon/icon-blog.svg" alt="" aria-hidden="true" />
-                <span>BLOG</span>
+                <span>PORTFOLIO</span>
               </button>
               <button class="quick-links__item" data-quick-link="github" type="button">
                 <img src="./assets/images/ui/icon/icon-github.svg" alt="" aria-hidden="true" />
@@ -163,6 +212,7 @@
             <div class="homepage-visual__blocks">
               <div class="homepage-visual__blocks-inner">
                 <span class="homepage-visual__block homepage-visual__block--r0-c0"></span>
+                <span class="homepage-visual__block homepage-visual__block--r0-c1"></span>
                 <span class="homepage-visual__block homepage-visual__block--r0-c2"></span>
                 <span class="homepage-visual__block homepage-visual__block--r0-c4"></span>
                 <span class="homepage-visual__block homepage-visual__block--r1-c1"></span>
@@ -172,38 +222,36 @@
                 <span class="homepage-visual__block homepage-visual__block--r2-c0"></span>
                 <span class="homepage-visual__block homepage-visual__block--r2-c1"></span>
                 <span class="homepage-visual__block homepage-visual__block--r2-c2"></span>
+                <span class="homepage-visual__block homepage-visual__block--r2-c3"></span>
                 <span class="homepage-visual__block homepage-visual__block--r3-c0"></span>
+                <span class="homepage-visual__block homepage-visual__block--r3-c2"></span>
                 <span class="homepage-visual__block homepage-visual__block--r3-c3"></span>
+                <span class="homepage-visual__block homepage-visual__block--r3-c4"></span>
               </div>
             </div>
             <span class="homepage-visual__origin"></span>
             <svg class="homepage-visual__orange-svg" viewBox="0 0 620 760" role="presentation">
-              <path
-                class="homepage-visual__orange-path"
-                d="M310 380 L310 -260
-                   M310 380 C310 340 280 312 250 282 L-110 -90
-                   M310 380 C310 340 338 305 378 272 C440 220 500 90 555 -260
-                   M310 380 L310 1040
-                   M310 570 C310 670 336 820 400 1040"
-              />
+              <path class="homepage-visual__orange-path homepage-visual__orange-path--vertical" pathLength="1" d="M310 380 L310 38" />
+              <path class="homepage-visual__orange-path homepage-visual__orange-path--left" pathLength="1" d="M310 380 L310 324 Q310 300 290 280 L78 68" />
+              <path class="homepage-visual__orange-path homepage-visual__orange-path--right" pathLength="1" d="M310 380 L310 350 Q310 326 334 302 L482 154 Q502 134 502 106 L502 58" />
+              <path class="homepage-visual__orange-path homepage-visual__orange-path--lower-right" pathLength="1" d="M310 380 L310 516 Q310 544 334 568 L470 704" />
+              <path class="homepage-visual__orange-path homepage-visual__orange-path--root" pathLength="1" d="M310 380 L310 448 Q310 472 288 494 L150 632 L150 716" />
             </svg>
             <svg class="homepage-visual__data-svg" viewBox="0 0 620 760" role="presentation">
-              <line class="homepage-visual__data-line homepage-visual__data-line--a" x1="280" y1="-260" x2="280" y2="1180"></line>
-              <line class="homepage-visual__data-line homepage-visual__data-line--b" x1="294" y1="-260" x2="294" y2="1180"></line>
-              <line class="homepage-visual__data-line homepage-visual__data-line--c" x1="308" y1="-260" x2="308" y2="1180"></line>
-              <line class="homepage-visual__data-line homepage-visual__data-line--d" x1="516" y1="-260" x2="516" y2="1180"></line>
+              <path class="homepage-visual__data-line homepage-visual__data-line--a" pathLength="1" d="M282 380 L282 340 Q282 316 262 296 L58 92" />
+              <path class="homepage-visual__data-line homepage-visual__data-line--b" pathLength="1" d="M338 380 L338 356 Q338 340 356 322 L504 174 Q530 148 530 112 L530 92" />
+              <path class="homepage-visual__data-line homepage-visual__data-line--c" pathLength="1" d="M338 402 L338 504 Q338 528 360 550 L494 684" />
+              <path class="homepage-visual__data-line homepage-visual__data-line--d" pathLength="1" d="M282 404 L282 436 Q282 460 262 480 L122 620 L122 690" />
 
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--1" cx="280" cy="222" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--2" cx="294" cy="222" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--3" cx="308" cy="222" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--4" cx="280" cy="380" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--5" cx="294" cy="380" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--6" cx="308" cy="380" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--7" cx="280" cy="634" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--8" cx="294" cy="634" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--9" cx="308" cy="634" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--10" cx="516" cy="220" r="4"></circle>
-              <circle class="homepage-visual__data-dot homepage-visual__data-dot--11" cx="516" cy="472" r="4"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--1" cx="310" cy="38" r="15"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--2" cx="78" cy="68" r="12"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--3" cx="502" cy="58" r="12"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--4" cx="470" cy="704" r="12"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--5" cx="150" cy="716" r="10"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--6" cx="58" cy="92" r="4"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--7" cx="530" cy="92" r="4"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--8" cx="494" cy="684" r="4"></circle>
+              <circle class="homepage-visual__data-dot homepage-visual__data-dot--9" cx="122" cy="690" r="4"></circle>
             </svg>
             <svg class="homepage-visual__svg" viewBox="0 0 620 760" role="presentation">
               <path class="homepage-visual__orange-line homepage-visual__orange-line--main" d="M310 16 L310 742" />
@@ -253,20 +301,20 @@
             </svg>
           </div>
 
-          <nav class="side-nav" aria-label="Section navigation">
-            <button class="side-nav__item side-nav__item--active" type="button">HOMEPAGE</button>
-            <button class="side-nav__item" type="button">HEADQUARTERS</button>
-            <button class="side-nav__item" type="button">MEMBER</button>
-            <button class="side-nav__item" type="button">DEPARTMENT</button>
-            <button class="side-nav__item" type="button">RESEARCH</button>
+            <nav class="side-nav" aria-label="Resume section navigation">
+            <button class="side-nav__item side-nav__item--active" type="button">PROFILE</button>
+            <button class="side-nav__item" type="button">EXPERIENCE</button>
+            <button class="side-nav__item" type="button">CAPABILITIES</button>
+            <button class="side-nav__item" type="button">PROJECTS</button>
+            <button class="side-nav__item" type="button">EDUCATION</button>
           </nav>
         </div>
 
         <footer class="screen-footer screen-footer--dark">
           <div class="screen-footer__compliance">
             <span class="screen-footer__report">
-              侵权/违规内容举报：18290982860
-              <a class="screen-footer__report-link" href="mailto:zjg654123@126.com">zjg654123@126.com</a>
+              CONTACT CHANNEL · DETAILS AVAILABLE ON REQUEST
+              <a class="screen-footer__report-link" href="mailto:your.email@example.com">your.email@example.com</a>
             </span>
             <span class="screen-footer__records">
               <a
@@ -275,7 +323,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新ICP备2026005055号-1
+                RESUME / 2026
               </a>
               <a
                 class="screen-footer__record"
@@ -283,67 +331,68 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新公网安备65402302000118号
+                OPEN TO SELECTED PROJECTS
               </a>
             </span>
           </div>
           <div class="screen-footer__brand">
-            <span>POWERED BY RHINE LAB</span>
+            <span>POWERED BY ZUODEV RESUME OS</span>
             <span class="screen-footer__bar" aria-hidden="true"></span>
           </div>
         </footer>
       </section>
 
-      <section class="headquarters-screen" id="headquarters-screen" aria-label="Rhine Lab Headquarters" aria-hidden="true">
+      <section class="headquarters-screen" id="headquarters-screen" aria-label="Resume Experience" aria-hidden="true">
+        <div class="screen-watermark" aria-hidden="true"></div>
         <div class="headquarters-screen__bg" aria-hidden="true"></div>
         <div class="headquarters-screen__veil" aria-hidden="true"></div>
 
         <header class="brand-mark brand-mark--light">
-          <p class="brand-mark__title">RHINE LAB</p>
-          <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
-          <p class="brand-mark__meta">ANALYSIS OS</p>
+          <p class="brand-mark__title">ZUODEV</p>
+          <p class="brand-mark__meta">SYNTHESIZE EXPERIENCE</p>
+          <p class="brand-mark__meta">RESUME OS</p>
         </header>
 
         <div class="headquarters-screen__content">
           <div class="headquarters-copy">
-            <p class="headquarters-copy__eyebrow">HEADQUARTERS</p>
-            <h2 class="headquarters-copy__title">PRIMARY NODE ONLINE</h2>
+            <p class="headquarters-copy__eyebrow">EXPERIENCE / 02</p>
+            <h2 class="headquarters-copy__title">WORK ARCHIVE ONLINE</h2>
             <p class="headquarters-copy__summary">
               你的 Blog 主阵地入口。这里承接长期内容归档、项目记录与实验日志。
             </p>
 
             <div class="headquarters-copy__status">
               <span class="headquarters-copy__status-label">STATUS</span>
-              <span class="headquarters-copy__status-value">BLOG CHANNEL ACTIVE</span>
+              <span class="headquarters-copy__status-value">PROFILE CHANNEL ACTIVE</span>
             </div>
 
             <div class="headquarters-actions">
-              <button class="command-button" id="headquarters-enter" type="button">ENTER HEADQUARTERS</button>
+              <button class="command-button" id="headquarters-enter" type="button">OPEN EXPERIENCE LOG</button>
               <a
                 class="headquarters-actions__fallback"
-                href="http://blog.zuodev.top/"
+                href="#"
                 target="_blank"
                 rel="noreferrer"
               >
-                Primary Channel / blog.zuodev.top
+                Primary Channel / resume archive
               </a>
             </div>
           </div>
 
           <nav class="side-nav side-nav--light" aria-label="Section navigation">
-            <button class="side-nav__item" type="button">HOMEPAGE</button>
-            <button class="side-nav__item side-nav__item--active" type="button">HEADQUARTERS</button>
-            <button class="side-nav__item" type="button">MEMBER</button>
-            <button class="side-nav__item" type="button">DEPARTMENT</button>
-            <button class="side-nav__item" type="button">RESEARCH</button>
+            <button class="side-nav__item" type="button">PROFILE</button>
+            <button class="side-nav__item side-nav__item--active" type="button">EXPERIENCE</button>
+            <button class="side-nav__item" type="button">CAPABILITIES</button>
+            <button class="side-nav__item" type="button">PROJECTS</button>
+            <button class="side-nav__item" type="button">EDUCATION</button>
           </nav>
         </div>
 
         <footer class="screen-footer screen-footer--light">
           <div class="screen-footer__compliance">
             <span class="screen-footer__report">
-              侵权/违规内容举报：18290982860
-              <a class="screen-footer__report-link" href="mailto:zjg654123@126.com">zjg654123@126.com</a>
+              CONTACT CHANNEL · DETAILS AVAILABLE ON REQUEST
+              <a class="screen-footer__report-link" href="mailto:your.email@example.com">your.email@example.com</a>
             </span>
             <span class="screen-footer__records">
               <a
@@ -352,7 +401,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新ICP备2026005055号-1
+                RESUME / 2026
               </a>
               <a
                 class="screen-footer__record"
@@ -360,22 +409,23 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新公网安备65402302000118号
+                OPEN TO SELECTED PROJECTS
               </a>
             </span>
           </div>
           <div class="screen-footer__brand">
-            <span>POWERED BY RHINE LAB</span>
+            <span>POWERED BY ZUODEV RESUME OS</span>
             <span class="screen-footer__bar" aria-hidden="true"></span>
           </div>
         </footer>
       </section>
 
-      <section class="member-screen" id="member-screen" aria-label="Rhine Lab Member" aria-hidden="true">
+      <section class="member-screen" id="member-screen" aria-label="Resume Capabilities" aria-hidden="true">
+        <div class="screen-watermark" aria-hidden="true"></div>
         <header class="brand-mark brand-mark--dark">
-          <p class="brand-mark__title">RHINE LAB</p>
-          <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
-          <p class="brand-mark__meta">ANALYSIS OS</p>
+          <p class="brand-mark__title">ZUODEV</p>
+          <p class="brand-mark__meta">SYNTHESIZE EXPERIENCE</p>
+          <p class="brand-mark__meta">RESUME OS</p>
         </header>
 
         <div class="member-screen__content">
@@ -464,19 +514,19 @@
           </div>
 
           <nav class="side-nav" aria-label="Section navigation">
-            <button class="side-nav__item" type="button">HOMEPAGE</button>
-            <button class="side-nav__item" type="button">HEADQUARTERS</button>
-            <button class="side-nav__item side-nav__item--active" type="button">MEMBER</button>
-            <button class="side-nav__item" type="button">DEPARTMENT</button>
-            <button class="side-nav__item" type="button">RESEARCH</button>
+            <button class="side-nav__item" type="button">PROFILE</button>
+            <button class="side-nav__item" type="button">EXPERIENCE</button>
+            <button class="side-nav__item side-nav__item--active" type="button">CAPABILITIES</button>
+            <button class="side-nav__item" type="button">PROJECTS</button>
+            <button class="side-nav__item" type="button">EDUCATION</button>
           </nav>
         </div>
 
         <footer class="screen-footer screen-footer--dark">
           <div class="screen-footer__compliance">
             <span class="screen-footer__report">
-              侵权/违规内容举报：18290982860
-              <a class="screen-footer__report-link" href="mailto:zjg654123@126.com">zjg654123@126.com</a>
+              CONTACT CHANNEL · DETAILS AVAILABLE ON REQUEST
+              <a class="screen-footer__report-link" href="mailto:your.email@example.com">your.email@example.com</a>
             </span>
             <span class="screen-footer__records">
               <a
@@ -485,7 +535,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新ICP备2026005055号-1
+                RESUME / 2026
               </a>
               <a
                 class="screen-footer__record"
@@ -493,22 +543,23 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新公网安备65402302000118号
+                OPEN TO SELECTED PROJECTS
               </a>
             </span>
           </div>
           <div class="screen-footer__brand">
-            <span>POWERED BY RHINE LAB</span>
+            <span>POWERED BY ZUODEV RESUME OS</span>
             <span class="screen-footer__bar" aria-hidden="true"></span>
           </div>
         </footer>
       </section>
 
-      <section class="department-screen" id="department-screen" aria-label="Rhine Lab Department" aria-hidden="true">
+      <section class="department-screen" id="department-screen" aria-label="Resume Projects" aria-hidden="true">
+        <div class="screen-watermark" aria-hidden="true"></div>
         <header class="brand-mark brand-mark--dark">
-          <p class="brand-mark__title">RHINE LAB</p>
-          <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
-          <p class="brand-mark__meta">ANALYSIS OS</p>
+          <p class="brand-mark__title">ZUODEV</p>
+          <p class="brand-mark__meta">SYNTHESIZE EXPERIENCE</p>
+          <p class="brand-mark__meta">RESUME OS</p>
         </header>
 
         <div class="department-screen__content">
@@ -599,7 +650,7 @@
               data-panel-title="DEFENSE"
               data-panel-subtitle="PROJECT ACCESS"
               data-panel-copy="进入核心项目主入口，查看长期内容归档与系统总览。"
-              data-link="https://blog.zuodev.top/"
+              data-link="#"
             >
               <span class="department-card__code">DEF</span>
               <span class="department-card__desc">DEFENSE SECTION</span>
@@ -611,7 +662,7 @@
               data-panel-title="ECOLOGICAL"
               data-panel-subtitle="EXPERIMENT JOURNAL"
               data-panel-copy="实验日志入口，收纳个人随笔、观察记录与碎片化表达。"
-              data-link="http://blog.zuodev.top/article/2"
+              data-link="#"
             >
               <span class="department-card__code">ECO</span>
               <span class="department-card__desc">ECOLOGICAL SECTION</span>
@@ -623,7 +674,7 @@
               data-panel-title="BUSINESS"
               data-panel-subtitle="ARCHIVE CHANNEL"
               data-panel-copy="Blog 主站入口，承接长期内容归档与更新记录。"
-              data-link="http://blog.zuodev.top/"
+              data-link="#"
             >
               <span class="department-card__code">BSN</span>
               <span class="department-card__desc">BUSINESS SECTION</span>
@@ -635,7 +686,7 @@
               data-panel-title="ENGINEERING"
               data-panel-subtitle="TECH NOTE ACCESS"
               data-panel-copy="技术笔记入口，承接阅读记录、方法总结与技能梳理内容。"
-              data-link="http://blog.zuodev.top/article/5"
+              data-link="#"
             >
               <span class="department-card__code">ENG</span>
               <span class="department-card__desc">ENGINEERING SECTION</span>
@@ -647,7 +698,7 @@
               data-panel-title="HUMAN RESOURCES INVESTIGATION"
               data-panel-subtitle="PROJECT ENTRY"
               data-panel-copy="AI 编程面试小助手与失物招领项目入口会在这里持续联动扩展。"
-              data-link="http://blog.zuodev.top/article/4"
+              data-link="#"
             >
               <span class="department-card__code">HRI</span>
               <span class="department-card__desc">HUMAN RESOURCES INVESTIGATION SECTION</span>
@@ -655,19 +706,19 @@
           </div>
 
           <nav class="side-nav" aria-label="Section navigation">
-            <button class="side-nav__item" type="button">HOMEPAGE</button>
-            <button class="side-nav__item" type="button">HEADQUARTERS</button>
-            <button class="side-nav__item" type="button">MEMBER</button>
-            <button class="side-nav__item side-nav__item--active" type="button">DEPARTMENT</button>
-            <button class="side-nav__item" type="button">RESEARCH</button>
+            <button class="side-nav__item" type="button">PROFILE</button>
+            <button class="side-nav__item" type="button">EXPERIENCE</button>
+            <button class="side-nav__item" type="button">CAPABILITIES</button>
+            <button class="side-nav__item side-nav__item--active" type="button">PROJECTS</button>
+            <button class="side-nav__item" type="button">EDUCATION</button>
           </nav>
         </div>
 
         <footer class="screen-footer screen-footer--dark">
           <div class="screen-footer__compliance">
             <span class="screen-footer__report">
-              侵权/违规内容举报：18290982860
-              <a class="screen-footer__report-link" href="mailto:zjg654123@126.com">zjg654123@126.com</a>
+              CONTACT CHANNEL · DETAILS AVAILABLE ON REQUEST
+              <a class="screen-footer__report-link" href="mailto:your.email@example.com">your.email@example.com</a>
             </span>
             <span class="screen-footer__records">
               <a
@@ -676,7 +727,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新ICP备2026005055号-1
+                RESUME / 2026
               </a>
               <a
                 class="screen-footer__record"
@@ -684,18 +735,19 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新公网安备65402302000118号
+                OPEN TO SELECTED PROJECTS
               </a>
             </span>
           </div>
           <div class="screen-footer__brand">
-            <span>POWERED BY RHINE LAB</span>
+            <span>POWERED BY ZUODEV RESUME OS</span>
             <span class="screen-footer__bar" aria-hidden="true"></span>
           </div>
         </footer>
       </section>
 
-      <section class="research-screen" id="research-screen" aria-label="Rhine Lab Research" aria-hidden="true">
+      <section class="research-screen" id="research-screen" aria-label="Resume Education" aria-hidden="true">
+        <div class="screen-watermark" aria-hidden="true"></div>
         <div class="research-screen__bg" aria-hidden="true">
           <video
             class="research-screen__video"
@@ -711,17 +763,17 @@
         <div class="research-screen__stars" aria-hidden="true"></div>
 
         <header class="brand-mark brand-mark--light">
-          <p class="brand-mark__title">RHINE LAB</p>
-          <p class="brand-mark__meta">SYNTHESIZE INFORMATION</p>
-          <p class="brand-mark__meta">ANALYSIS OS</p>
+          <p class="brand-mark__title">ZUODEV</p>
+          <p class="brand-mark__meta">SYNTHESIZE EXPERIENCE</p>
+          <p class="brand-mark__meta">RESUME OS</p>
         </header>
 
         <div class="research-screen__content">
           <aside class="research-panel">
             <div class="research-panel__header">
-              <p class="research-panel__name">Rhine.</p>
-              <h2 class="research-panel__title">先锋计划</h2>
-              <p class="research-panel__subtitle">Rhine Lab Pioneer Project</p>
+            <p class="research-panel__name">ZuoDev.</p>
+              <h2 class="research-panel__title">教育与研究</h2>
+              <p class="research-panel__subtitle">EDUCATION / CONTINUOUS LEARNING</p>
             </div>
 
             <div class="research-progress">
@@ -788,7 +840,7 @@
             <a
               class="research-info__link"
               id="research-link"
-              href="http://blog.zuodev.top/article/4"
+              href="#"
               target="_blank"
               rel="noreferrer"
             >
@@ -797,19 +849,19 @@
           </div>
 
           <nav class="side-nav side-nav--light" aria-label="Section navigation">
-            <button class="side-nav__item" type="button">HOMEPAGE</button>
-            <button class="side-nav__item" type="button">HEADQUARTERS</button>
-            <button class="side-nav__item" type="button">MEMBER</button>
-            <button class="side-nav__item" type="button">DEPARTMENT</button>
-            <button class="side-nav__item side-nav__item--active" type="button">RESEARCH</button>
+              <button class="side-nav__item" type="button">PROFILE</button>
+              <button class="side-nav__item" type="button">EXPERIENCE</button>
+              <button class="side-nav__item" type="button">CAPABILITIES</button>
+              <button class="side-nav__item" type="button">PROJECTS</button>
+              <button class="side-nav__item side-nav__item--active" type="button">EDUCATION</button>
           </nav>
         </div>
 
         <footer class="screen-footer screen-footer--light">
           <div class="screen-footer__compliance">
             <span class="screen-footer__report">
-              侵权/违规内容举报：18290982860
-              <a class="screen-footer__report-link" href="mailto:zjg654123@126.com">zjg654123@126.com</a>
+              CONTACT CHANNEL · DETAILS AVAILABLE ON REQUEST
+              <a class="screen-footer__report-link" href="mailto:your.email@example.com">your.email@example.com</a>
             </span>
             <span class="screen-footer__records">
               <a
@@ -818,7 +870,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新ICP备2026005055号-1
+                RESUME / 2026
               </a>
               <a
                 class="screen-footer__record"
@@ -826,12 +878,12 @@
                 target="_blank"
                 rel="noreferrer"
               >
-                新公网安备65402302000118号
+                OPEN TO SELECTED PROJECTS
               </a>
             </span>
           </div>
           <div class="screen-footer__brand">
-            <span>POWERED BY RHINE LAB</span>
+            <span>POWERED BY ZUODEV RESUME OS</span>
             <span class="screen-footer__bar" aria-hidden="true"></span>
           </div>
         </footer>

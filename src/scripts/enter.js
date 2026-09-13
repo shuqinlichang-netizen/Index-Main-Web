@@ -1,5 +1,10 @@
 const enterScreen = document.getElementById("enter-screen");
 const enterButton = document.getElementById("enter-button");
+const entryMenu = document.getElementById("entry-menu");
+const entryMenuToggle = document.getElementById("entry-menu-toggle");
+const entryMenuClose = document.getElementById("entry-menu-close");
+const entryCtas = Array.from(document.querySelectorAll("[data-entry-cta]"));
+const logoStage = document.querySelector(".logo-stage");
 const logoLottieContainer = document.getElementById("logo-lottie");
 const logoFallback = document.getElementById("logo-fallback");
 const authScreen = document.getElementById("auth-screen");
@@ -49,26 +54,29 @@ const departmentNavButtons = departmentScreen ? departmentScreen.querySelectorAl
 const researchNavButtons = researchScreen ? researchScreen.querySelectorAll(".side-nav__item") : [];
 
 const typeTarget = "PERMISSION AUTHORIZED";
-const introSeenKey = "rhine-lab-intro-seen";
+const introSeenKey = "miru-resume-intro-seen";
 let typeTimer;
+let entryTransitionTimer;
+let homepageTransitionTimer;
 let memberIndex = 0;
 let modalValue = "";
 let activeResearchIndex = 0;
-let logoAnimation;
+let logoAnimationReady = false;
+let logoAnimationFrame;
 let researchProgressFrame;
 
 const siteConfig = {
   links: {
-    blog: "http://blog.zuodev.top/",
-    github: "https://github.com/ZuoDev1",
-    article2: "http://blog.zuodev.top/article/2",
-    article3: "http://blog.zuodev.top/article/3",
-    article4: "http://blog.zuodev.top/article/4",
-    article5: "http://blog.zuodev.top/article/5",
+    blog: "https://github.com/shuqinlichang-netizen",
+    github: "https://github.com/shuqinlichang-netizen",
+    article2: "#",
+    article3: "#",
+    article4: "#",
+    article5: "#",
   },
   contact: {
-    email: "zjg654123@126.com",
-    qq: "3175695904",
+    email: "shuqinlichang@gmail.com",
+    qq: "3223471462",
   },
 };
 
@@ -142,10 +150,35 @@ function applyCopyUpdates() {
   const links = siteConfig.links;
 
   document.querySelectorAll(".brand-mark__title").forEach((title) => {
-    title.textContent = copy.brandTitle || "ZORRO";
+    title.textContent = copy.brandTitle || "MIRU";
   });
 
-  setText(".enter-panel__title", copy.enter?.title || "ENTER ZORRO LAB");
+  document.querySelectorAll(".brand-mark").forEach((brand) => {
+    const meta = brand.querySelectorAll(".brand-mark__meta");
+    if (meta[0]) meta[0].textContent = copy.brandMeta?.[0] || "CREATIVE EDITING";
+    if (meta[1]) meta[1].textContent = copy.brandMeta?.[1] || "QUALITY ASSURANCE";
+  });
+
+  document.querySelectorAll(".screen-footer__report-link").forEach((link) => {
+    link.href = `mailto:${siteConfig.contact.email}`;
+    link.textContent = siteConfig.contact.email;
+  });
+
+  document.querySelectorAll(".screen-footer").forEach((footer) => {
+    const records = footer.querySelectorAll(".screen-footer__record");
+    if (records[0]) {
+      records[0].href = siteConfig.links.github;
+      records[0].textContent = "GITHUB / MIRU";
+    }
+    if (records[1]) {
+      records[1].href = `mailto:${siteConfig.contact.email}`;
+      records[1].textContent = "QQ / 3223471462";
+    }
+    const identity = footer.querySelector(".screen-footer__brand span");
+    if (identity) identity.textContent = "MIRU PERSONAL RESUME";
+  });
+
+  setText(".enter-panel__title", copy.enter?.title || "ENTER RESUME OS");
   setText(".enter-panel__copy", copy.enter?.copy || "");
   setText(".enter-panel__hint", copy.enter?.hint || "");
   setText(".auth-screen__subcopy", copy.auth?.subcopy || "");
@@ -205,6 +238,7 @@ function applyCopyUpdates() {
   });
 
   setText(".research-panel__title", copy.research?.panelTitle || "");
+  setText(".research-panel__name", "Miru.");
   setText(".research-progress__label", copy.research?.progressLabel || "");
   setText(".research-panel__quote", copy.research?.quote || "");
 
@@ -244,12 +278,18 @@ function showAuthScreen() {
     return;
   }
 
+  if (enterScreen) {
+    enterScreen.classList.add("is-dismissed");
+    enterScreen.setAttribute("aria-hidden", "true");
+  }
+
   authScreen.classList.add("is-visible");
   authScreen.setAttribute("aria-hidden", "false");
   runTypewriter();
   window.localStorage.setItem(introSeenKey, "1");
 
-  window.setTimeout(() => {
+  window.clearTimeout(homepageTransitionTimer);
+  homepageTransitionTimer = window.setTimeout(() => {
     showHomepage();
   }, 2800);
 }
@@ -257,6 +297,11 @@ function showAuthScreen() {
 function showHomepage() {
   if (!homepageScreen || !authScreen) {
     return;
+  }
+
+  if (enterScreen) {
+    enterScreen.classList.add("is-dismissed");
+    enterScreen.setAttribute("aria-hidden", "true");
   }
 
   authScreen.classList.remove("is-visible");
@@ -510,37 +555,39 @@ function closeInfoModal() {
   infoModal.setAttribute("aria-hidden", "true");
 }
 
-function setupLottieLogo() {
-  if (!window.lottie || !logoLottieContainer) {
-    return;
-  }
+async function setupLogoAnimation() {
+  if (!logoFallback || logoAnimationReady) return;
 
-  try {
-    logoAnimation = window.lottie.loadAnimation({
-      container: logoLottieContainer,
-      renderer: "svg",
-      loop: false,
-      autoplay: true,
-      animationData: window.rhineLogoAnimationData,
-      rendererSettings: {
-        preserveAspectRatio: "xMidYMid meet",
-      },
-    });
+  logoAnimationReady = true;
+  logoFallback.classList.remove("is-hidden");
+  if (logoStage) logoStage.classList.remove("is-fallback");
 
-    logoAnimation.addEventListener("DOMLoaded", () => {
-      logoLottieContainer.classList.add("is-ready");
-      if (logoFallback) {
-        logoFallback.classList.add("is-hidden");
-      }
-    });
-  } catch {
-    if (logoFallback) {
-      logoFallback.classList.remove("is-hidden");
-    }
-  }
+  // Decode both copies before starting their shared animation clock.
+  await Promise.all(Array.from(logoStage.querySelectorAll("img"), image => image.decode().catch(() => {})));
+  replayLogoAnimation();
 }
 
+function replayLogoAnimation() {
+  if (!logoFallback) return;
+
+  if (logoAnimationFrame) {
+    cancelAnimationFrame(logoAnimationFrame);
+  }
+
+  logoFallback.classList.remove("is-visible");
+  logoStage?.classList.remove("is-playing");
+  void logoFallback.offsetWidth;
+  logoAnimationFrame = requestAnimationFrame(() => {
+    logoFallback.classList.add("is-visible");
+    logoStage?.classList.add("is-playing");
+  });
+}
+
+
 function resetIntro() {
+  window.clearTimeout(entryTransitionTimer);
+  window.clearTimeout(homepageTransitionTimer);
+  window.clearTimeout(typeTimer);
   if (authScreen) {
     authScreen.classList.remove("is-visible");
     authScreen.setAttribute("aria-hidden", "true");
@@ -548,6 +595,8 @@ function resetIntro() {
 
   if (enterScreen) {
     enterScreen.classList.remove("is-transitioning");
+    enterScreen.classList.remove("is-dismissed");
+    enterScreen.setAttribute("aria-hidden", "false");
   }
 
   if (enterButton) {
@@ -583,22 +632,53 @@ function resetIntro() {
     authTypeLine.textContent = typeTarget;
   }
 
-  if (logoAnimation) {
-    logoAnimation.stop();
-    logoAnimation.goToAndPlay(0, true);
-  }
+  replayLogoAnimation();
 }
+
 
 if (enterButton && enterScreen) {
   enterButton.addEventListener("click", () => {
+    if (enterScreen.classList.contains("is-transitioning")) return;
     enterButton.classList.add("is-activated");
     enterScreen.classList.add("is-transitioning");
 
-    window.setTimeout(() => {
+    entryTransitionTimer = window.setTimeout(() => {
       showAuthScreen();
     }, 520);
   });
 }
+
+function setEntryMenu(open) {
+  if (!entryMenu || !entryMenuToggle) {
+    return;
+  }
+
+  entryMenu.classList.toggle("is-open", open);
+  entryMenu.setAttribute("aria-hidden", String(!open));
+  entryMenuToggle.setAttribute("aria-expanded", String(open));
+  entryMenuToggle.setAttribute("aria-label", open ? "Close entry navigation" : "Open entry navigation");
+}
+
+if (entryMenuToggle) {
+  entryMenuToggle.addEventListener("click", () => {
+    setEntryMenu(!entryMenu?.classList.contains("is-open"));
+  });
+}
+
+if (entryMenuClose) {
+  entryMenuClose.addEventListener("click", () => setEntryMenu(false));
+}
+
+entryMenu?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setEntryMenu(false));
+});
+
+entryCtas.forEach((cta) => {
+  cta.addEventListener("click", () => {
+    setEntryMenu(false);
+    enterButton?.click();
+  });
+});
 
 if (homepageReplay) {
   homepageReplay.addEventListener("click", () => {
@@ -874,8 +954,22 @@ if (infoModalBackdrop) {
   infoModalBackdrop.addEventListener("click", closeInfoModal);
 }
 
-if (window.localStorage.getItem(introSeenKey) === "1") {
-  showHomepage();
+// Always start from the entry screen after a full page refresh.
+// The intro state is intentionally not restored from localStorage so the
+// entry animation and authorization sequence can be experienced each time.
+if (enterScreen) {
+  enterScreen.classList.remove("is-dismissed", "is-transitioning");
+  enterScreen.setAttribute("aria-hidden", "false");
 }
 
-setupLottieLogo();
+if (authScreen) {
+  authScreen.classList.remove("is-visible");
+  authScreen.setAttribute("aria-hidden", "true");
+}
+
+if (homepageScreen) {
+  homepageScreen.classList.remove("is-visible");
+  homepageScreen.setAttribute("aria-hidden", "true");
+}
+
+setupLogoAnimation();
