@@ -1,0 +1,1138 @@
+[
+  {
+    "width": 375,
+    "name": "homepage",
+    "report": {
+      "screen": {
+        "x": 10.390625,
+        "y": 10.390625,
+        "width": 354.21875,
+        "height": 823.21875,
+        "top": 10.390625,
+        "right": 364.609375,
+        "bottom": 833.609375,
+        "left": 10.390625
+      },
+      "scrollWidth": 354,
+      "clientWidth": 354,
+      "scrollHeight": 1401,
+      "clientHeight": 823,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "homepage-copy__replay",
+          "text": "REPLAY INTRO",
+          "width": 111.25,
+          "height": 15
+        },
+        {
+          "className": "quick-links__item",
+          "text": "PORTFOLIO",
+          "width": 145.109375,
+          "height": 44.21875
+        },
+        {
+          "className": "quick-links__item",
+          "text": "GITHUB",
+          "width": 145.109375,
+          "height": 44.21875
+        },
+        {
+          "className": "quick-links__item",
+          "text": "EMAIL",
+          "width": 145.109375,
+          "height": 44.21875
+        },
+        {
+          "className": "quick-links__item",
+          "text": "QQ",
+          "width": 145.109375,
+          "height": 44.21875
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "PROFILE",
+          "width": 59.1875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 87.421875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 95.921875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 71.375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 85.34375,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "modal": {
+        "visible": "false",
+        "rect": {
+          "x": 16,
+          "y": 311.796875,
+          "width": 343,
+          "height": 220.40625,
+          "top": 311.796875,
+          "right": 359,
+          "bottom": 532.203125,
+          "left": 16
+        }
+      }
+    }
+  },
+  {
+    "width": 375,
+    "name": "experience",
+    "report": {
+      "screen": {
+        "x": 10.390625,
+        "y": 10.390625,
+        "width": 354.21875,
+        "height": 823.21875,
+        "top": 10.390625,
+        "right": 364.609375,
+        "bottom": 833.609375,
+        "left": 10.390625
+      },
+      "scrollWidth": 354,
+      "clientWidth": 354,
+      "scrollHeight": 828,
+      "clientHeight": 823,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "command-button",
+          "text": "OPEN EXPERIENCE LOG",
+          "width": 322.21875,
+          "height": 49
+        },
+        {
+          "className": "headquarters-actions__fallback",
+          "text": "Primary Channel / resume",
+          "width": 259.140625,
+          "height": 16
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ]
+    }
+  },
+  {
+    "width": 375,
+    "name": "capabilities",
+    "report": {
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 844,
+        "top": 0,
+        "right": 375,
+        "bottom": 844,
+        "left": 0
+      },
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "scrollHeight": 942,
+      "clientHeight": 844,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "member-carousel__arrow member-carousel__arrow--prev",
+          "text": "‹",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "className": "member-carousel__arrow member-carousel__arrow--next",
+          "text": "›",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "nextClickable": true,
+      "activeCard": {
+        "title": "BLOGGER",
+        "rect": {
+          "x": 27.5,
+          "y": 128,
+          "width": 320,
+          "height": 496,
+          "top": 128,
+          "right": 347.5,
+          "bottom": 624,
+          "left": 27.5
+        }
+      }
+    }
+  },
+  {
+    "width": 375,
+    "name": "projects",
+    "report": {
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 844,
+        "top": 0,
+        "right": 375,
+        "bottom": 844,
+        "left": 0
+      },
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "scrollHeight": 1553,
+      "clientHeight": 844,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "department-card department-card--outer department-card--outer-top is-skill is-active",
+          "text": "CMPTCTRL\n              C",
+          "width": 165.09375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-top is-skill",
+          "text": "ORG\n              ORIGIN",
+          "width": 165.109375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--outer-middle is-skill",
+          "text": "NRG\n              ENERGY",
+          "width": 165.09375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-bottom is-skill",
+          "text": "SCIEN\n              SCIE",
+          "width": 165.109375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--outer department-card--outer-bottom is-skill",
+          "text": "STRU\n              STRUC",
+          "width": 165.09375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-panel__link",
+          "text": "INFORMATION ONLY",
+          "width": 157.796875,
+          "height": 15
+        },
+        {
+          "className": "department-card department-card--outer department-card--outer-top is-link",
+          "text": "DEF\n              DEFENS",
+          "width": 165.09375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-top is-link",
+          "text": "ECO\n              ECOLOG",
+          "width": 165.109375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--outer-middle is-link",
+          "text": "BSN\n              BUSINE",
+          "width": 165.09375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-bottom is-link",
+          "text": "ENG\n              ENGINE",
+          "width": 165.109375,
+          "height": 134.390625
+        },
+        {
+          "className": "department-card department-card--outer department-card--outer-bottom is-link",
+          "text": "HRI\n              HUMAN ",
+          "width": 165.09375,
+          "height": 134.390625
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "panel": {
+        "title": "SOFTWARE TESTING",
+        "rect": {
+          "x": 16,
+          "y": 571.15625,
+          "width": 343,
+          "height": 305.5625,
+          "top": 571.15625,
+          "right": 359,
+          "bottom": 876.71875,
+          "left": 16
+        }
+      },
+      "afterScroll": {
+        "x": 16,
+        "y": -154.84375,
+        "width": 343,
+        "height": 305.5625
+      }
+    }
+  },
+  {
+    "width": 375,
+    "name": "education",
+    "report": {
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 375,
+        "height": 844,
+        "top": 0,
+        "right": 375,
+        "bottom": 844,
+        "left": 0
+      },
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "scrollHeight": 1101,
+      "clientHeight": 844,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "research-panel__button",
+          "text": "VIEW PRIMARY FILE",
+          "width": 304.21875,
+          "height": 51
+        },
+        {
+          "className": "research-info__switch is-active",
+          "text": "R-1",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "className": "research-info__switch",
+          "text": "R-2",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "className": "research-info__switch",
+          "text": "R-3",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "className": "research-info__link",
+          "text": "VIEW ARTICLE",
+          "width": 78.078125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "research": {
+        "visible": "block",
+        "rect": {
+          "x": 16,
+          "y": 563.15625,
+          "width": 343,
+          "height": 302.0625,
+          "top": 563.15625,
+          "right": 359,
+          "bottom": 865.21875,
+          "left": 16
+        }
+      }
+    }
+  },
+  {
+    "width": 375,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "name": "homepage",
+    "report": {
+      "screen": {
+        "x": 10.390625,
+        "y": 10.390625,
+        "width": 299.21875,
+        "height": 823.21875,
+        "top": 10.390625,
+        "right": 309.609375,
+        "bottom": 833.609375,
+        "left": 10.390625
+      },
+      "scrollWidth": 299,
+      "clientWidth": 299,
+      "scrollHeight": 1413,
+      "clientHeight": 823,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "homepage-copy__replay",
+          "text": "REPLAY INTRO",
+          "width": 111.25,
+          "height": 15
+        },
+        {
+          "className": "quick-links__item",
+          "text": "PORTFOLIO",
+          "width": 117.609375,
+          "height": 44.21875
+        },
+        {
+          "className": "quick-links__item",
+          "text": "GITHUB",
+          "width": 117.609375,
+          "height": 44.21875
+        },
+        {
+          "className": "quick-links__item",
+          "text": "EMAIL",
+          "width": 117.609375,
+          "height": 44.21875
+        },
+        {
+          "className": "quick-links__item",
+          "text": "QQ",
+          "width": 117.609375,
+          "height": 44.21875
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "PROFILE",
+          "width": 59.1875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 87.421875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 95.921875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 71.375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 85.34375,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "modal": {
+        "visible": "false",
+        "rect": {
+          "x": 16,
+          "y": 297.796875,
+          "width": 288,
+          "height": 248.40625,
+          "top": 297.796875,
+          "right": 304,
+          "bottom": 546.203125,
+          "left": 16
+        }
+      }
+    }
+  },
+  {
+    "width": 320,
+    "name": "experience",
+    "report": {
+      "screen": {
+        "x": 10.390625,
+        "y": 10.390625,
+        "width": 299.21875,
+        "height": 823.21875,
+        "top": 10.390625,
+        "right": 309.609375,
+        "bottom": 833.609375,
+        "left": 10.390625
+      },
+      "scrollWidth": 299,
+      "clientWidth": 299,
+      "scrollHeight": 939,
+      "clientHeight": 823,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "command-button",
+          "text": "OPEN EXPERIENCE LOG",
+          "width": 267.21875,
+          "height": 49
+        },
+        {
+          "className": "headquarters-actions__fallback",
+          "text": "Primary Channel / resume",
+          "width": 259.140625,
+          "height": 16
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ]
+    }
+  },
+  {
+    "width": 320,
+    "name": "capabilities",
+    "report": {
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 942,
+      "clientHeight": 844,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "member-carousel__arrow member-carousel__arrow--prev",
+          "text": "‹",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "className": "member-carousel__arrow member-carousel__arrow--next",
+          "text": "›",
+          "width": 48,
+          "height": 48
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "nextClickable": true,
+      "activeCard": {
+        "title": "BLOGGER",
+        "rect": {
+          "x": 16,
+          "y": 128,
+          "width": 288,
+          "height": 496,
+          "top": 128,
+          "right": 304,
+          "bottom": 624,
+          "left": 16
+        }
+      }
+    }
+  },
+  {
+    "width": 320,
+    "name": "projects",
+    "report": {
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 1500,
+      "clientHeight": 844,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "department-card department-card--outer department-card--outer-top is-skill is-active",
+          "text": "CMPTCTRL\n              C",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-top is-skill",
+          "text": "ORG\n              ORIGIN",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--outer-middle is-skill",
+          "text": "NRG\n              ENERGY",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-bottom is-skill",
+          "text": "SCIEN\n              SCIE",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--outer department-card--outer-bottom is-skill",
+          "text": "STRU\n              STRUC",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-panel__link",
+          "text": "INFORMATION ONLY",
+          "width": 157.796875,
+          "height": 15
+        },
+        {
+          "className": "department-card department-card--outer department-card--outer-top is-link",
+          "text": "DEF\n              DEFENS",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-top is-link",
+          "text": "ECO\n              ECOLOG",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--outer-middle is-link",
+          "text": "BSN\n              BUSINE",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--inner department-card--inner-bottom is-link",
+          "text": "ENG\n              ENGINE",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "department-card department-card--outer department-card--outer-bottom is-link",
+          "text": "HRI\n              HUMAN ",
+          "width": 139.203125,
+          "height": 124.796875
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "panel": {
+        "title": "SOFTWARE TESTING",
+        "rect": {
+          "x": 16,
+          "y": 535.96875,
+          "width": 288,
+          "height": 333.375,
+          "top": 535.96875,
+          "right": 304,
+          "bottom": 869.34375,
+          "left": 16
+        }
+      },
+      "afterScroll": {
+        "x": 16,
+        "y": -147.03125,
+        "width": 288,
+        "height": 333.375
+      }
+    }
+  },
+  {
+    "width": 320,
+    "name": "education",
+    "report": {
+      "screen": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 844,
+        "top": 0,
+        "right": 320,
+        "bottom": 844,
+        "left": 0
+      },
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 1133,
+      "clientHeight": 844,
+      "overflow": [],
+      "controls": [
+        {
+          "className": "research-panel__button",
+          "text": "VIEW PRIMARY FILE",
+          "width": 249.21875,
+          "height": 51
+        },
+        {
+          "className": "research-info__switch is-active",
+          "text": "R-1",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "className": "research-info__switch",
+          "text": "R-2",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "className": "research-info__switch",
+          "text": "R-3",
+          "width": 44,
+          "height": 44
+        },
+        {
+          "className": "research-info__link",
+          "text": "VIEW ARTICLE",
+          "width": 78.078125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROFILE",
+          "width": 61.859375,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "EXPERIENCE",
+          "width": 85.046875,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "CAPABILITIES",
+          "width": 90.3125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item",
+          "text": "PROJECTS",
+          "width": 72.328125,
+          "height": 44
+        },
+        {
+          "className": "side-nav__item side-nav__item--active",
+          "text": "EDUCATION",
+          "width": 84.5625,
+          "height": 44
+        },
+        {
+          "className": "screen-footer__report-link",
+          "text": "shuqinlichang@gmail.com",
+          "width": 158.015625,
+          "height": 15
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "GITHUB / MIRU",
+          "width": 100.5,
+          "height": 16.578125
+        },
+        {
+          "className": "screen-footer__record",
+          "text": "QQ / 3223471462",
+          "width": 115.015625,
+          "height": 16.578125
+        }
+      ],
+      "research": {
+        "visible": "block",
+        "rect": {
+          "x": 16,
+          "y": 579.15625,
+          "width": 288,
+          "height": 302.0625,
+          "top": 579.15625,
+          "right": 304,
+          "bottom": 881.21875,
+          "left": 16
+        }
+      }
+    }
+  },
+  {
+    "width": 320,
+    "errors": []
+  }
+]

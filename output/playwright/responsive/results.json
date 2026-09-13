@@ -1,0 +1,212 @@
+[
+  {
+    "tag": "320-568-no-preference",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 32
+  },
+  {
+    "tag": "320-568-no-preference",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "320-568-no-preference",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "320-568-no-preference",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "320-568-no-preference",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "375-844-no-preference",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 32
+  },
+  {
+    "tag": "375-844-no-preference",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "375-844-no-preference",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "375-844-no-preference",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "375-844-no-preference",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "414-896-no-preference",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 32
+  },
+  {
+    "tag": "414-896-no-preference",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "414-896-no-preference",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "414-896-no-preference",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "414-896-no-preference",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "640-800-no-preference",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 32
+  },
+  {
+    "tag": "640-800-no-preference",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "640-800-no-preference",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "640-800-no-preference",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "640-800-no-preference",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "768-1024-no-preference",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 93.59375
+  },
+  {
+    "tag": "768-1024-no-preference",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "768-1024-no-preference",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "768-1024-no-preference",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "768-1024-no-preference",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "844-390-no-preference",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 32
+  },
+  {
+    "tag": "844-390-no-preference",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "844-390-no-preference",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "844-390-no-preference",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "844-390-no-preference",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "375-667-reduce",
+    "name": "homepage",
+    "horizontalOverflow": 0,
+    "footerGap": 32
+  },
+  {
+    "tag": "375-667-reduce",
+    "name": "headquarters",
+    "horizontalOverflow": 0,
+    "footerGap": 12
+  },
+  {
+    "tag": "375-667-reduce",
+    "name": "member",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "375-667-reduce",
+    "name": "department",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  },
+  {
+    "tag": "375-667-reduce",
+    "name": "research",
+    "horizontalOverflow": 0,
+    "footerGap": 16
+  }
+]
